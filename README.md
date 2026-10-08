@@ -105,12 +105,18 @@ connection reached the right machine.
 
 ![Security group rules](screenshots/09-security-group-rules.png)
 
+> **Note:** The screenshot also shows an HTTP (port 80) rule open to `0.0.0.0/0`.
+> It is not needed for this setup (no web server was running) and was left over
+> from testing. In a real environment I would remove it or restrict it, and use
+> separate security groups for the public and private machines.
+
 ## Possible improvements
 
 - Create the same infrastructure with Terraform.
 - Use separate security groups for the public and private machines.
 - Add a NAT gateway so the private instance can reach the internet for updates.
 - Add an Application Load Balancer and an RDS database in the private subnet.
+- Remove unused rules and follow least privilege with separate security groups per tier
 
 ## Cleanup
 
