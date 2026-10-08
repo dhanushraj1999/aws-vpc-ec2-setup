@@ -92,6 +92,15 @@ Private route table, local route only:
 
 ![RDP connection](screenshots/11-rdp-connection.png)
 
+**RDP session on the public machine**
+
+Logged in to the Windows desktop on the public instance. The overlay shows the
+private IP `10.0.0.40` (inside the public subnet `10.0.0.0/26`), the instance ID,
+instance type `t3.micro` and Availability Zone `us-east-1b`, confirming the
+connection reached the right machine.
+
+![RDP session](screenshots/12-rdp-session.png)
+
 **Security group** (RDP allowed from my IP only)
 
 ![Security group rules](screenshots/09-security-group-rules.png)
