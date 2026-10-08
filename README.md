@@ -59,17 +59,42 @@ A hands-on AWS networking project built manually in the AWS Management Console (
 
 ## Screenshots
 
-Add your screenshots to a `screenshots/` folder and link them here.
+**VPC**
 
-<!-- Replace the file names with your own. -->
-- VPC details: `screenshots/01-vpc.png`
-- Subnets: `screenshots/02-subnets.png`
-- Internet gateway (attached): `screenshots/03-igw.png`
-- Public route table (with IGW route): `screenshots/04-public-rt.png`
-- Private route table (local only): `screenshots/05-private-rt.png`
-- EC2 instances: `screenshots/06-instances.png`
-- Security group inbound rules: `screenshots/07-security-group.png`
-- RDP session to the public machine: `screenshots/08-rdp.png`
+![VPC](screenshots/01-vpc.png)
+
+**Subnets** (public `10.0.0.0/26`, private `10.0.0.64/26`)
+
+![Public subnet](screenshots/02-subnets-public.png)
+![Private subnet](screenshots/03-subnets-private.png)
+
+**Internet gateway**
+
+![Internet gateway](screenshots/08-internet-gateway.png)
+
+**Route tables**
+
+Public route table, with the `0.0.0.0/0` route to the internet gateway:
+
+![Public route table](screenshots/04-public-rt-routes.png)
+![Public route table association](screenshots/06-public-rt-association.png)
+
+Private route table, local route only:
+
+![Private route table](screenshots/05-private-rt-routes.png)
+![Private route table association](screenshots/07-private-rt-association.png)
+
+**EC2 instances** (public and private machines, both running)
+
+![EC2 instances](screenshots/10-ec2-instances.png)
+
+**RDP connection to the public machine**
+
+![RDP connection](screenshots/11-rdp-connection.png)
+
+**Security group** (RDP allowed from my IP only)
+
+![Security group rules](screenshots/09-security-group-rules.png)
 
 ## Possible improvements
 
